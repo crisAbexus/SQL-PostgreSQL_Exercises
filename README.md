@@ -44,6 +44,7 @@ that, the employee_id column does not contain any duplicate value at the time
 of insertion and the foreign key column job_id contain only those values which
 exist in the jobs table.
 Here is the structure of the table jobs;
+
 ![output](./images/pic0.png)
 14. ​ Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, email, phone_number hire_date, job_id,
@@ -118,4 +119,5 @@ Here is the structure of the table locations.
 22.​ Write a SQL statement to change the data type of the column region_id to
 text in the table locations.
 Here is the structure of the table locations.
+
 ![output](./images/pic9.png)
