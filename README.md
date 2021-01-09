@@ -46,6 +46,7 @@ exist in the jobs table.
 Here is the structure of the table jobs;
 
 ![output](./images/pic0.png)
+
 14. ​ Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, email, phone_number hire_date, job_id,
 salary, commission, manager_id and department_id and make sure that, the
@@ -54,7 +55,9 @@ insertion and the foreign key columns combined by department_id and
 manager_id columns contain only those unique combination values, which
 combinations exist in the departments table.
 Assume the structure of departments table below.
+
 ![output](./images/pic1.png)
+
 15. ​ Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, email, phone_number hire_date, job_id,
 salary, commission, manager_id and department_id and make sure that, the 
@@ -65,7 +68,9 @@ exist in the departments table and another foreign key column job_id,
 referenced by the column job_id of jobs table, can contain only those values
 which exist in the jobs table.
 Assume that the structure of two tables departments and jobs.
+
 ![output](./images/pic2.png)
+
 16. ​ Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, job_id, salary and make sure that, the
 employee_id column does not contain any duplicate value at the time of
@@ -74,7 +79,9 @@ of jobs table, can contain only those values which exist in the jobs table. The
 specialty of the statement is that the ON UPDATE CASCADE action allows
 you to perform the cross-table update and ON DELETE RESTRICT action
 rejects the deletion. The default action is ON DELETE RESTRICT.
+
 ![output](./images/pic3.png)
+
 17. ​ Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, job_id, salary and make sure that, the
 employee_id column does not contain any duplicate value at the time of
@@ -85,7 +92,9 @@ allow to delete records in the employees(child) table that refers to a record in
 the jobs(parent) table when the record in the parent table is deleted and the
 ON UPDATE RESTRICT actions reject any updates.
 Assume that the following is the structure of the table jobs.
+
 ![output](./images/pic4.png)
+
 18. ​ Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, job_id, salary and make sure that, the
 employee_id column does not contain any duplicate value at the time of
@@ -98,7 +107,9 @@ column in the child table must accept NULL values and the ON UPDATE SET
 NULL action resets the values in the rows in the child table(employees) to
 NULL values when the rows in the parent table(jobs) are updated.
 Assume that the following is the structure of two table jobs.
+
 ![output](./images/pic5.png)
+
 19. ​ Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, job_id, salary and make sure that, the
 employee_id column does not contain any duplicate value at the time of
@@ -107,13 +118,16 @@ of jobs table, can contain only those values which exist in the jobs table. The
 specialty of the statement is that, The ON DELETE NO ACTION and the ON
 UPDATE NO ACTION actions will reject the deletion and any updates.
 Assume that the following is the structure of two table jobs.
+
 ![output](./images/pic6.png)
 
 20.​ Write a SQL statement to rename the table countries to country_new.
+
 ![output](./images/pic7.png)
 
 21.​ Write a SQL statement to add a column region_id to the table locations.
 Here is the structure of the table locations.
+
 ![output](./images/pic8.png)
 
 22.​ Write a SQL statement to change the data type of the column region_id to
