@@ -1,1 +1,2 @@
-CREATE TABLE dup_countries AS (SELECT * FROM countries) WITH NO DATA;
+DROP TABLE dup_countries;
+CREATE TABLE IF NOT EXISTS dup_countries AS (SELECT * FROM countries);
