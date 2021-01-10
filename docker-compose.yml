@@ -1,0 +1,26 @@
+version: '3.6'
+
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: postgres
+    environment:
+      - POSTGRES_USER=cristian0
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=Countries
+    ports:
+      - 1313:5432
+    volumes:
+      - .:/home
+
+  pgadmin-compose:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "a@r.m"
+      PGADMIN_DEFAULT_PASSWORD: "1234"
+    ports:
+      - 1234:80
+    depends_on:
+      - db
