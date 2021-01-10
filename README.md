@@ -13,44 +13,44 @@ $ docker exec -it sql-postgresql_exercises_db_1 psql -U cristian0 Countries
 1. Write a SQL statement to create a simple table countries including columns
 country_id,country_name and region_id.
 
-`Countries-# \i /home/script1.sql`
+    `Countries-# \i /home/script1.sql`
 
 2. Write a SQL statement to create a simple table countries including columns
 country_id,country_name and region_id which already exist.
 
-`Countries-# \i /home/script1.sql`
+    `Countries-# \i /home/script1.sql`
 
 3. Write a SQL statement to create the structure of a table dup_countries
 similar to countries.
 
-`Countries-# \i /home/script3.sql`
+    `Countries-# \i /home/script3.sql`
 
 4. Write a SQL statement to create a duplicate copy of countries table
 including structure and data by name dup_countries.
 
-`Countries-# \i /home/script3.sql`
+    `Countries-# \i /home/script3.sql`
 
 5. ​ Write a SQL statement to create a table countries set a constraint NULL.
 
-`Countries-# \i /home/script1.sql`
+    `Countries-# \i /home/script1.sql`
 
 6. Write a SQL statement to create a table named jobs including columns
 job_id, job_title, min_salary, max_salary and check whether the max_salary
 amount exceeding the upper limit 25000.
 
-`Countries-# \i /home/jobs.sql`
+    `Countries-# \i /home/jobs.sql`
 
 7. ​ Write a SQL statement to create a table named countries including columns
 country_id, country_name and region_id and make sure that no countries
 except Italy, India and China will be entered in the table.
 
-`Countries-# \i /home/Countries.sql`
+    `Countries-# \i /home/Countries.sql`
 
 8. ​ Write a SQL statement to create a table named countries including columns
 country_id,country_name and region_id and make sure that no duplicate data
 against column country_id will be allowed at the time of insertion.
 
-`Countries-# \i /home/Countries.sql`
+    `Countries-# \i /home/Countries.sql`
 
 9. ​ Write a SQL statement to create a table named jobs including columns
 job_id, job_title, min_salary and max_salary, and make sure that, the default
@@ -58,21 +58,27 @@ value for job_title is blank and min_salary is 8000 and max_salary is NULL will
 be entered automatically at the time of insertion if no value assigned for the
 specified columns.
 
-`Countries-# \i /home/jobs.sql`
+    `Countries-# \i /home/jobs.sql`
 
 10. ​ Write a SQL statement to create a table named countries including
 columns country_id, country_name and region_id and make sure that the
 country_id column will be a key field which will not contain any duplicate data
 at the time of insertion.
 
-`Countries-# \i /home/Countries.sql`
+    `Countries-# \i /home/Countries.sql`
 
 11. ​ Write a SQL statement to create a table countries including columns
 country_id, country_name and region_id and make sure that the column
 country_id will be unique and store an auto-incremented value.
+
+    `Countries-# \i /home/Countries.sql`
+
 12. ​ Write a SQL statement to create a table countries including columns
 country_id, country_name and region_id and make sure that the combination
 of columns country_id and region_id will be unique.
+
+    `Countries-# \i /home/Countries.sql`
+
 13. ​ Write a SQL statement to create a table job_history including columns
 employee_id, start_date, end_date, job_id and department_id and make sure
 that, the employee_id column does not contain any duplicate value at the time

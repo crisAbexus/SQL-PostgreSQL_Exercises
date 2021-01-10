@@ -1,8 +1,9 @@
 DROP TABLE Countries;
 CREATE TABLE Countries( 
-    country_id SERIAL UNIQUE PRIMARY KEY,
+    country_id SERIAL UNIQUE,
     country_name varchar(50),
-    region_id decimal(10,0)
+    region_id decimal(10,0) UNIQUE,
+    PRIMARY KEY(region_id, country_id)
 );
 
 INSERT INTO Countries (country_name, region_id) VALUES ('Nigeria', 8.7531549);
