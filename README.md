@@ -4,22 +4,41 @@ course, complete the following exercises:
 
 Solve the following challenges, at the end you must upload them to
 your Github.
+
 `$ docker-compose up -d`
+
 `$ docker exec -it sql-postgresql_exercises_db_1 psql -U cristian0 Countries`
 
 1. Write a SQL statement to create a simple table countries including columns
 country_id,country_name and region_id.
-`\i /home/script1.sql`
+
+`Countries-# \i /home/script1.sql`
+
 2. Write a SQL statement to create a simple table countries including columns
 country_id,country_name and region_id which already exist.
+
+`Countries-# \i /home/script1.sql`
+
 3. Write a SQL statement to create the structure of a table dup_countries
 similar to countries.
+
+`Countries-# \i /home/script3.sql`
+
 4. Write a SQL statement to create a duplicate copy of countries table
 including structure and data by name dup_countries.
+
+`Countries-# \i /home/script3.sql`
+
 5. ​ Write a SQL statement to create a table countries set a constraint NULL.
+
+`Countries-# \i /home/script1.sql`
+
 6. Write a SQL statement to create a table named jobs including columns
 job_id, job_title, min_salary, max_salary and check whether the max_salary
 amount exceeding the upper limit 25000.
+
+`Countries-# \i /home/jobs.sql`
+
 7. ​ Write a SQL statement to create a table named countries including columns
 country_id, country_name and region_id and make sure that no countries
 except Italy, India and China will be entered in the table.
