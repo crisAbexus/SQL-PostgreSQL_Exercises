@@ -14,6 +14,7 @@ services:
       - 1313:5432
     volumes:
       - .:/home
+      - ./mock_data.sql:/docker-entrypoint-initdb.d/init.sql
 
   pgadmin-compose:
     image: dpage/pgadmin4
