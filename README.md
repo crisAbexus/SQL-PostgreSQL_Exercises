@@ -115,9 +115,9 @@ Assume that the structure of two tables departments and jobs.
 
     ![output](./images/pic2.png)
 
-    
+    **Countries-#** `\i /home/employees.sql`
 
-16. ​ Write a SQL statement to create a table employees including columns
+16. ​Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, job_id, salary and make sure that, the
 employee_id column does not contain any duplicate value at the time of
 insertion, and the foreign key column job_id, referenced by the column job_id
@@ -127,6 +127,8 @@ you to perform the cross-table update and ON DELETE RESTRICT action
 rejects the deletion. The default action is ON DELETE RESTRICT.
 
     ![output](./images/pic3.png)
+
+    **Countries-#** `\i /home/employees.sql`
 
 17. ​ Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, job_id, salary and make sure that, the
