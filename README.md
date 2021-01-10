@@ -4,14 +4,21 @@ course, complete the following exercises:
 
 Solve the following challenges, at the end you must upload them to
 your Github.
+
 `$ docker-compose up -d`
+
 `$ docker exec -it sql-postgresql_exercises_db_1 psql -U cristian0 Countries`
 
 1. Write a SQL statement to create a simple table countries including columns
 country_id,country_name and region_id.
-`\i /home/script1.sql`
+
+`Countries-# \i /home/script1.sql`
+
 2. Write a SQL statement to create a simple table countries including columns
 country_id,country_name and region_id which already exist.
+
+`Countries-# \i /home/script1.sql`
+
 3. Write a SQL statement to create the structure of a table dup_countries
 similar to countries.
 4. Write a SQL statement to create a duplicate copy of countries table
