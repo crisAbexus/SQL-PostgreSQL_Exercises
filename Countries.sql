@@ -1,6 +1,6 @@
 DROP TABLE Countries;
 CREATE TABLE Countries( 
-    country_id varchar(3) UNIQUE,
+    country_id varchar(3) UNIQUE PRIMARY KEY,
     country_name varchar(50),
     region_id decimal(10,0)
 );

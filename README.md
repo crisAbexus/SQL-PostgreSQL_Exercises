@@ -5,9 +5,10 @@ course, complete the following exercises:
 Solve the following challenges, at the end you must upload them to
 your Github.
 
-`$ docker-compose up -d`
-
-`$ docker exec -it sql-postgresql_exercises_db_1 psql -U cristian0 Countries`
+`
+$ docker-compose up -d
+$ docker exec -it sql-postgresql_exercises_db_1 psql -U cristian0 Countries
+`
 
 1. Write a SQL statement to create a simple table countries including columns
 country_id,country_name and region_id.
@@ -63,6 +64,9 @@ specified columns.
 columns country_id, country_name and region_id and make sure that the
 country_id column will be a key field which will not contain any duplicate data
 at the time of insertion.
+
+`Countries-# \i /home/Countries.sql`
+
 11. ​ Write a SQL statement to create a table countries including columns
 country_id, country_name and region_id and make sure that the column
 country_id will be unique and store an auto-incremented value.
