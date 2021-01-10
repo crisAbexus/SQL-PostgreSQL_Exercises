@@ -5,8 +5,8 @@ course, complete the following exercises:
 Solve the following challenges, at the end you must upload them to
 your Github.
 
-**$** `docker-compose up -d`
-**$** `docker exec -it sql-postgresql_exercises_db_1 psql -U cristian0 Countries`
+    **$** `docker-compose up -d`
+    **$** `docker exec -it sql-postgresql_exercises_db_1 psql -U cristian0 Countries`
 
 1. Write a SQL statement to create a simple table countries including columns
 country_id,country_name and region_id.
@@ -100,6 +100,8 @@ Assume the structure of departments table below.
 
     ![output](./images/pic1.png)
 
+    **Countries-#** `\i /home/employees.sql`
+
 15. ​ Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, email, phone_number hire_date, job_id,
 salary, commission, manager_id and department_id and make sure that, the 
@@ -112,6 +114,8 @@ which exist in the jobs table.
 Assume that the structure of two tables departments and jobs.
 
     ![output](./images/pic2.png)
+
+    
 
 16. ​ Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, job_id, salary and make sure that, the

@@ -1,13 +1,140 @@
 DROP TABLE employees;
 DROP TABLE departments;
+DROP TABLE job_history;
+DROP TABLE jobs;
+
+CREATE TABLE jobs (
+	job_id VARCHAR(10) NOT NULL PRIMARY KEY,
+	job_title VARCHAR(35) NOT NULL,
+	min_salary DECIMAL(6,0) DEFAULT NULL,
+	max_salary DECIMAL(6,0) DEFAULT NULL
+);
 
 create table departments (
-	department_id DECIMAL(4,0) NOT NULL,
+	department_id DECIMAL(4,0) UNIQUE NOT NULL,
 	department_name VARCHAR(30) NOT NULL,
 	manager_id DECIMAL(6,0) NOT NULL DEFAULT NULL,
 	location_id DECIMAL(4,0) DEFAULT NULL,
     PRIMARY KEY (department_id, manager_id)
 );
+
+create table employees (
+	employee_id INT UNIQUE,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	email VARCHAR(50),
+	phone_number VARCHAR(50),
+	hire_date DATE,
+	job_id VARCHAR(40),
+	salary INT,
+	commission INT,
+	manager_id DECIMAL(7,6),
+	department_id DECIMAL(5,4),
+    FOREIGN KEY (department_id) REFERENCES departments(department_id),
+    FOREIGN KEY (job_id) REFERENCES jobs(job_id)
+);
+
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (61, 'Recruiter', 2584, 12670);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (5, 'GIS Technical Architect', 2943, 24254);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (40, 'Programmer Analyst III', 1668, 18027);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (21, 'Cost Accountant', 780, 12343);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (9, 'Senior Sales Associate', 1254, 9544);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (1, 'Food Chemist', 802, 6736);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (51, 'Professor', 2749, 25424);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (85, 'Statistician I', 2956, 8240);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (15, 'Mechanical Systems Engineer', 1152, 25963);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (29, 'Engineer II', 1476, 25720);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (64, 'Software Engineer II', 909, 11281);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (75, 'Help Desk Technician', 4493, 15965);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (72, 'Quality Engineer', 4038, 8090);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (66, 'Structural Engineer', 4936, 25969);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (18, 'Design Engineer', 3046, 11483);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (13, 'Executive Secretary', 4394, 8567);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (45, 'Nuclear Power Engineer', 1020, 16545);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (13, 'Sales Associate', 2959, 13188);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (67, 'General Manager', 1259, 10487);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (37, 'Budget/Accounting Analyst IV', 1915, 11836);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (64, 'Civil Engineer', 4824, 25906);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (28, 'Executive Secretary', 2903, 16092);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (34, 'Electrical Engineer', 1316, 17949);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (97, 'Analyst Programmer', 3755, 21329);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (88, 'Financial Advisor', 2652, 21099);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (22, 'Product Engineer', 3876, 12813);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (36, 'Assistant Professor', 802, 9132);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (42, 'Analyst Programmer', 845, 9641);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (31, 'Teacher', 1707, 15463);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (79, 'Software Consultant', 1758, 13306);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (34, 'Marketing Assistant', 3213, 25426);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (100, 'Administrative Officer', 3871, 17120);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (83, 'Dental Hygienist', 1517, 23481);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (18, 'Developer II', 1437, 7654);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (9, 'Environmental Specialist', 4857, 25301);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (19, 'Dental Hygienist', 1248, 21576);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (21, 'Software Test Engineer IV', 1819, 21647);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (63, 'Financial Advisor', 3756, 13929);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (79, 'Cost Accountant', 1698, 7707);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (72, 'Research Nurse', 4522, 20937);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (43, 'Systems Administrator II', 2804, 5319);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (6, 'GIS Technical Architect', 4969, 11363);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (97, 'Programmer Analyst III', 3437, 8718);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (46, 'Recruiting Manager', 2878, 12085);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (25, 'Help Desk Technician', 3083, 16763);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (49, 'Database Administrator I', 3700, 19373);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (75, 'Accountant I', 3050, 5007);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (17, 'Junior Executive', 4934, 12757);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (88, 'Nurse', 991, 22616);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (65, 'VP Sales', 944, 12729);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (8, 'Research Nurse', 2656, 14861);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (39, 'Quality Control Specialist', 1044, 25317);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (47, 'Senior Editor', 1457, 14471);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (7, 'Structural Analysis Engineer', 1715, 13635);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (48, 'Accountant I', 1880, 21772);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (88, 'Registered Nurse', 3018, 8078);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (92, 'Accounting Assistant IV', 2605, 25215);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (28, 'Assistant Media Planner', 967, 17557);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (14, 'Geological Engineer', 4032, 6864);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (70, 'Payment Adjustment Coordinator', 4120, 18185);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (49, 'Chief Design Engineer', 2632, 23626);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (47, 'Recruiter', 1913, 20774);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (52, 'Recruiting Manager', 3956, 15422);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (33, 'Account Coordinator', 1337, 15400);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (18, 'Quality Control Specialist', 4794, 24564);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (83, 'Administrative Officer', 1114, 16171);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (64, 'Staff Scientist', 2003, 17275);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (89, 'Web Developer III', 3110, 19346);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (64, 'Computer Systems Analyst III', 2869, 9801);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (92, 'Operator', 2917, 17317);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (94, 'Information Systems Manager', 3383, 15941);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (14, 'VP Marketing', 2301, 6726);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (8, 'Nurse', 1115, 13582);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (32, 'Software Engineer I', 3994, 19657);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (88, 'Help Desk Operator', 4213, 8897);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (35, 'Account Executive', 3961, 20771);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (66, 'VP Accounting', 4691, 5129);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (68, 'Accountant IV', 2141, 6667);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (73, 'Accounting Assistant II', 3001, 5591);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (16, 'Statistician I', 3224, 9541);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (53, 'Systems Administrator I', 2809, 20018);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (5, 'Junior Executive', 3681, 10032);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (40, 'Product Engineer', 1719, 20803);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (20, 'Financial Advisor', 3667, 16188);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (15, 'Data Coordiator', 2871, 10427);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (19, 'Librarian', 4768, 14896);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (73, 'Staff Scientist', 2999, 8314);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (16, 'Senior Developer', 1715, 24553);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (37, 'General Manager', 700, 23759);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (86, 'Senior Editor', 2333, 23720);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (92, 'Nurse Practicioner', 4810, 9047);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (55, 'Software Test Engineer I', 3548, 8499);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (58, 'Information Systems Manager', 1849, 13362);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (100, 'Statistician IV', 3575, 18816);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (45, 'Director of Sales', 1114, 19368);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (28, 'Statistician III', 1946, 16162);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (58, 'Social Worker', 1112, 19442);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (19, 'VP Marketing', 4537, 15499);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (43, 'Financial Advisor', 4108, 24853);
+INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (16, 'Product Engineer', 4403, 5137);
+
 insert into departments (department_id, department_name, manager_id, location_id) values (1, 'Pagac-Funk', 0.268937, 0.5834);
 insert into departments (department_id, department_name, manager_id, location_id) values (2, 'McCullough-Gerhold', 0.10085, 0.4215);
 insert into departments (department_id, department_name, manager_id, location_id) values (3, 'Konopelski, Hahn and Littel', 0.210826, 0.1233);
@@ -109,22 +236,6 @@ insert into departments (department_id, department_name, manager_id, location_id
 insert into departments (department_id, department_name, manager_id, location_id) values (99, 'Emard Group', 0.723924, 0.5158);
 insert into departments (department_id, department_name, manager_id, location_id) values (100, 'Hagenes, Bogan and Gerlach', 0.152702, 0.1121);
 
-
-create table employees (
-	employee_id INT UNIQUE,
-	first_name VARCHAR(50),
-	last_name VARCHAR(50),
-	email VARCHAR(50),
-	phone_number VARCHAR(50),
-	hire_date DATE,
-	job_id VARCHAR(40),
-	salary INT,
-	commission INT,
-	manager_id DECIMAL(7,6),
-	department_id DECIMAL(5,4),
-    FOREIGN KEY (department_id, manager_id)
-    REFERENCES departments(department_id, manager_id)
-);
 
 insert into employees (employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission, manager_id ) values (7187, 'Timmie', 'Pittford', 'tpittford0@yandex.ru', '641-325-6827', '2020-03-10 22:01:05', '60ac9287-3192-4bfd-9c02-a4b8a2435e29', 19353, 156, 0.49303);
 insert into employees (employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission, manager_id ) values (5640, 'Garrard', 'Mullender', 'gmullender1@statcounter.com', '166-592-2922', '2020-08-09 04:17:04', '6983c505-9ded-4543-8e10-c35c9d41bec8', 3277, 321, 0.140948);
