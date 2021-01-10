@@ -48,11 +48,17 @@ except Italy, India and China will be entered in the table.
 8. ​ Write a SQL statement to create a table named countries including columns
 country_id,country_name and region_id and make sure that no duplicate data
 against column country_id will be allowed at the time of insertion.
+
+`Countries-# \i /home/Countries.sql`
+
 9. ​ Write a SQL statement to create a table named jobs including columns
 job_id, job_title, min_salary and max_salary, and make sure that, the default
 value for job_title is blank and min_salary is 8000 and max_salary is NULL will
 be entered automatically at the time of insertion if no value assigned for the
 specified columns.
+
+`Countries-# \i /home/jobs.sql`
+
 10. ​ Write a SQL statement to create a table named countries including
 columns country_id, country_name and region_id and make sure that the
 country_id column will be a key field which will not contain any duplicate data

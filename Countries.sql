@@ -1,9 +1,8 @@
 DROP TABLE Countries;
 CREATE TABLE Countries( 
-    country_id varchar(3),
+    country_id varchar(3) UNIQUE,
     country_name varchar(50),
-    region_id decimal(10,0),
-    CHECK(country_name IN ('Italy','India','China'))
+    region_id decimal(10,0)
 );
 
 INSERT INTO Countries (country_id, country_name, region_id) VALUES (889, 'Nigeria', 8.7531549);

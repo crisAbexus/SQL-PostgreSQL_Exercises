@@ -1,10 +1,11 @@
+DROP TABLE jobs;
 CREATE TABLE jobs (
 	job_id INT,
-	job_title VARCHAR(50),
-	min_salary INT,
-	max_salary INT
-	CHECK(max_salary <=25000)
+	job_title VARCHAR(50) DEFAULT '',
+	min_salary INT DEFAULT 8000,
+	max_salary INT DEFAULT NULL
 );
+
 INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (61, 'Recruiter', 2584, 12670);
 INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (5, 'GIS Technical Architect', 2943, 24254);
 INSERT INTO jobs (job_id, job_title, min_salary, max_salary) VALUES (40, 'Programmer Analyst III', 1668, 18027);
