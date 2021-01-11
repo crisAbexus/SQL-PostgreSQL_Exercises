@@ -22,7 +22,7 @@ create table employees (
 	commission INT,
 	manager_id DECIMAL(7,6),
 	department_id DECIMAL(5,4),
-    FOREIGN KEY (job_id) REFERENCES jobs(job_id) ON DELETE SET NULL ON UPDATE NULL
+    FOREIGN KEY (job_id) REFERENCES jobs(job_id) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
 -- create table departments (
