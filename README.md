@@ -160,6 +160,8 @@ Assume that the following is the structure of two table jobs.
 
     ![output](./images/pic5.png)
 
+    **Countries-#** `\i /home/employees.sql`
+
 19. ​ Write a SQL statement to create a table employees including columns
 employee_id, first_name, last_name, job_id, salary and make sure that, the
 employee_id column does not contain any duplicate value at the time of
@@ -170,6 +172,8 @@ UPDATE NO ACTION actions will reject the deletion and any updates.
 Assume that the following is the structure of two table jobs.
 
     ![output](./images/pic6.png)
+
+    **Countries-#** `\i /home/employees.sql`
 
 20.​ Write a SQL statement to rename the table countries to country_new.
 
